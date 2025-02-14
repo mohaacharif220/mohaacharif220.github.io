@@ -3,54 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos</title>
+    <title>Pide tu Presupuesto</title>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-     <!-- Encabezado de la página -->
-     <header>
+    
+    <!-- Encabezado de la página -->
+    <header>
         <img class="festina" src="../imagenes/festina-watches.svg" alt="Logo Festina" width="150" height="50">
 
         <nav>
             <ul class="enlaces">
                 <li> 
                     <img class="logo" src="../imagenes/homes.svg" alt="Home" width="30" height="30">
-                    <a href="./index.html">Home</a> 
+                    <a href="../index.html">Home</a> 
                 </li>
                 <li> 
                     <img class="logo" src="../imagenes/bag-fill.svg" alt="Productos" width="30" height="30">
                     <a href="./productos.html">Products</a>
                 </li>
                 <li> 
-                    <img class="contacto logo" src="../imagenes/contacto.svg" alt="Contacto" width="30" height="30">
+                    <img class="logo" src="../imagenes/contacto.svg" alt="Contacto" width="30" height="30">
                     <a href="./contacto.html">Contacto</a>
                 </li>
                 <li> 
-                    <img src="../imagenes/cash-coin.svg" alt="Presupuesto" class="logo" width="30" height="30">
+                    <img class="presupuesto logo" src="../imagenes/cash-coin.svg" alt="Presupuesto" width="30" height="30">
                     <a href="./presupuesto.html">Presupuesto</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <div class="contenedor-contacto">
-        <h1>Contáctanos</h1>
-        
-        <!-- Información de contacto -->
-        <div class="info-contacto">
-            <p><strong>📍 Dirección:</strong> Calle Jerusalén, Madrid, 29672</p>
-            <p><strong>📞 Teléfono:</strong> +34 600 123 456</p>
-            <p><strong>✉️ Correo Electrónico:</strong> contacto@festina.com</p>
-            <p><strong>⏰ Horario:</strong> Lunes a Viernes - 9:00 AM a 7:00 PM</p>
-        </div>
+    <!-- Contenedor del formulario -->
+    <div class="contenedor-formulario">
+        <h1>Solicita tu Presupuesto</h1>
+        <p>Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
 
-        <!-- Mapa de la ubicación -->
-        <div class="mapa">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1522.6239489813672!2d-3.771282310993007!3d40.24802171731594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1739455860807!5m2!1ses!2ses" 
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
+        <!-- Formulario con validaciones -->
+        <form id="formPresupuesto">
+            <!-- Campo Nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" pattern="[A-Za-z\s]{3,}" title="Solo letras, mínimo 3 caracteres" required placeholder="Nombre">
+
+            <!-- Campo Email -->
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" name="correo" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Introduce tu correo" required>
+
+            <!-- Campo Teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" pattern="[0-9]{9}" required>
+
+            <!-- Campo Solicitar más información -->
+            <label for="mensaje">Solicite más información:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe los detalles aquí..." required></textarea>
+
+            <!-- Checkbox de Política de Privacidad -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="privacidad" required>
+                <label for="privacidad">Acepto la <a href="#">Política de Privacidad</a></label>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button type="submit" id="btnEnviar">Enviar</button>
+        </form>
     </div>
 
     <!-- Pie de página -->
@@ -72,14 +87,14 @@
                     <img src="../imagenes/icons8-linkedin.svg" alt="LinkedIn" class="footer-icono" width="30" height="30">
                 </a>
             </div>
-    
+
             <!-- Dirección de la empresa -->
             <div class="footer-direccion">
                 <p>📍 <strong>Dirección:</strong> Calle Jerusalén, Madrid, 29672</p>
                 <p>📞 <strong>Teléfono:</strong> +34 600 123 456</p>
                 <p>✉️ <strong>Email:</strong> contacto@festina.com</p>
             </div>
-    
+
             <!-- Aviso legal -->
             <div class="footer-aviso">
                 <p><a href="./aviso-legal.html">📜 Aviso Legal</a></p>
