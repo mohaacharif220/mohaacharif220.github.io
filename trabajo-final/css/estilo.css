@@ -1,0 +1,618 @@
+/* ==========================
+        ESTILOS GENERALES
+========================== */
+body {
+    padding: 20px; /* Espaciado alrededor del contenido */
+    font-family: fantasy, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Tipografía general */
+}
+
+/* ==========================
+        ENCABEZADO
+========================== */
+header {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan en varias líneas */
+    flex-direction: column; /* Alinea los elementos en columna */
+}
+
+/* ==========================
+        MENÚ DE NAVEGACIÓN
+========================== */
+nav {
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Lista de enlaces en el menú */
+.enlaces {
+    overflow-x: auto; /* Permite desplazamiento horizontal si hay muchos elementos */
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Alinea los enlaces en fila */
+    column-gap: 60px; /* Espaciado entre enlaces */
+    margin: 10px 5px; /* Margen exterior */
+    width: 100%; /* Ocupar el ancho completo */
+    justify-content: center; /* Centra los enlaces */
+}
+
+/* Estilos para cada enlace */
+.enlaces > li {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Organiza elementos en columna */
+    width: 10%; /* Define el ancho */
+    max-width: 100px; /* Limita el tamaño máximo */
+}
+
+/* Efecto al pasar el cursor sobre los enlaces */
+.enlaces > li:hover {
+    font-size: large; /* Aumenta el tamaño de la fuente */
+}
+
+/* ==========================
+        LOGOTIPO
+========================== */
+.logo {
+    width: 80%; /* Ajusta el ancho del logo */
+    height: 80%; /* Ajusta la altura */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+/* Logo de Festina */
+.festina {
+    width: 10%; /* Tamaño del logo */
+    max-width: 300px; /* Ancho máximo */
+    margin-left: 50px; /* Espaciado desde la izquierda */
+}
+
+/* ==========================
+        ENLACES DEL MENÚ
+========================== */
+.enlaces a {
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Elimina el subrayado */
+    color: rgb(0, 0, 0); /* Color negro */
+}
+
+/* ==========================
+        CONTENEDOR PRINCIPAL
+========================== */
+.contenedor {
+    background-color: rgb(255, 255, 255); /* Color de fondo */
+    height: 600px; /* Altura fija */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex; /* Usa flexbox */
+    overflow: auto; /* Permite desplazamiento si el contenido es grande */
+}
+
+/* ==========================
+        SECCIÓN ART1 (RELOJES PARA HOMBRE)
+========================== */
+.art1 {
+    width: 25%; /* Ocupa el 25% del ancho */
+    height: 100%; /* Altura completa */
+    background-image: url("/imagenes/bannerhombre.webp"); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño */
+    background-position: 40%; /* Ajusta la posición de la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* ==========================
+        TEXTOS EN ARTÍCULOS
+========================== */
+.p1 {
+    text-transform: capitalize; /* Capitaliza las palabras */
+    padding: 5px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    color: aliceblue; /* Color del texto */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Fuente */
+}
+
+/* Resalta palabras clave */
+.p2 {
+    color: darkgoldenrod; /* Color dorado oscuro */
+}
+
+/* ==========================
+        SECCIÓN ART2 (RELOJES UNISEX)
+========================== */
+.art2 {
+    width: 50%; /* Ocupa el 50% del ancho */
+    height: 100%; /* Altura completa */
+    background-image: url("/imagenes/ambos.webp"); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño */
+    background-position: 0%; /* Ajusta la posición */
+    background-repeat: no-repeat; /* Evita que se repita */
+}
+
+/* ==========================
+        EFECTO HOVER EN ARTÍCULOS
+========================== */
+.art1:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.art2:hover {
+    transform: scale(1.07); /* Efecto de zoom */
+    border-radius: 10px;
+}
+
+.art3:hover {
+    border-radius: 10px; /* Bordes redondeados */
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* ==========================
+        SECCIÓN ART3 (RELOJES PARA MUJER)
+========================== */
+.art3 {
+    width: 25%; /* Ocupa el 25% del ancho */
+    height: 100%; /* Altura completa */
+    background-image: url("/imagenes/bannermujer.webp"); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen */
+    background-position: 30%; /* Ajusta la posición */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+/* ==========================
+        CONTENEDOR PRINCIPAL (AJUSTES GENERALES)
+========================== */
+.conten {
+    display: flex; /* Usa flexbox */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 80%; /* Ocupa el 80% de la altura */
+    gap: 20px; /* Espaciado entre elementos */
+    justify-content: center; /* Centra los elementos */
+}
+
+
+/* ==========================
+        PRODUCTOS CON SCROLL
+========================== */
+.productos-scroll {
+    width: 30%;
+    max-width: 400px;
+    height: auto;
+    max-height: 700px; /* Mantiene la altura del tercer artículo */
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 15px; /* Bordes redondeados */
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    scrollbar-color: gold transparent; /* Color del scrollbar */
+    scrollbar-width: thin; /* Hace el scrollbar más delgado */
+    transition: transform 0.3s ease-in-out; /* Efecto suave */
+}
+
+/* Efecto al pasar el cursor sobre la sección de productos */
+.productos-scroll img:hover {
+    transform: scale(1.2);
+    object-fit: contain;
+}
+
+/* Personalización del scrollbar en navegadores basados en WebKit */
+.productos-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.productos-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.productos-scroll::-webkit-scrollbar-thumb {
+    background-color: gold; /* Color dorado */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* ==========================
+        AJUSTE DE IMÁGENES EN PRODUCTOS
+========================== */
+.producto img {
+    width: 100%;
+    height: 120px; /* Mantiene una altura uniforme */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* ==========================
+        SECCIÓN IMAGEN Y CUALIDADES
+========================== */
+.imagen-cualidades {
+    width: 30%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen en la sección de cualidades */
+.imagen-cualidades img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+/* Contenedor del texto dentro de la sección de cualidades */
+.texto-cualidades {
+    margin-top: 15px;
+}
+
+/* Título dentro de la sección de cualidades */
+.texto-cualidades h2 {
+    font-size: 1.5rem;
+    color: rgb(50, 50, 50);
+}
+
+/* Párrafo dentro de la sección de cualidades */
+.texto-cualidades p {
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
+    margin-top: 10px;
+}
+
+/* ==========================
+        SECCIÓN DE INFORMACIÓN
+========================== */
+.wa {
+    text-align: center;
+    background-color: rgb(192, 202, 143);
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo del título animado "FESTINA" */
+.ola {
+    font-size: 2rem;
+    color: white;
+    background-color: rgb(192, 202, 143);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    animation: shift 2s ease-in-out infinite alternate;
+}
+
+/* Animación de distorsión para "FESTINA" */
+@keyframes shift {
+    0%, 100% {
+        clip-path: polygon(
+            0% 40%, 10% 42%, 33% 45%, 54% 50%, 
+            70% 52%, 84% 49%, 100% 44%, 
+            100% 100%, 0% 100%
+        );
+    }
+    50% {
+        clip-path: polygon(
+            0% 20%, 15% 25%, 34% 28%, 51% 30%, 
+            67% 25%, 84% 20%, 100% 18%, 
+            100% 100%, 0% 100%
+        );
+    }
+}
+
+/* ==========================
+        LISTA DE BENEFICIOS
+========================== */
+.lista {
+    flex-direction: column;
+    text-align: left;
+}
+
+.lista li {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.conten {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ajuste para mantener el mismo tamaño en las tres secciones */
+.wa, .productos-scroll, .imagen-cualidades {
+    flex: 1;
+    max-width: 30%;
+    min-width: 250px;
+}
+
+/* ==========================
+        FORMULARIO PRESUPUESTO
+========================== */
+.contenedor-formulario {
+    width: 40%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Fondo degradado suave */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Sombra moderna */
+    animation: fadeIn 0.8s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenedor-formulario h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contenedor-formulario p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+        ESTILO DEL FORMULARIO
+========================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Estilo de los campos de entrada */
+form label {
+    font-weight: bold;
+    color: #444;
+    align-self: flex-start;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al hacer foco en los inputs */
+form input:focus,
+form textarea:focus {
+    border-color: #ffc107; /* Amarillo dorado */
+    box-shadow: 0px 5px 15px rgba(255, 193, 7, 0.3);
+    outline: none;
+}
+
+/* ==========================
+        CHECKBOX ESTILIZADO
+========================== */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+/* Ocultar checkbox original */
+.checkbox-container input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffc107;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilo del checkbox cuando está marcado */
+.checkbox-container input:checked {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+/* Checkmark dentro del checkbox */
+.checkbox-container input:checked::after {
+    content: "✔";
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-container label {
+    color: #444;
+    cursor: pointer;
+}
+
+.checkbox-container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================
+        BOTÓN DE ENVÍO
+========================== */
+#btnEnviar {
+    background: linear-gradient(135deg, #ffca28, #ffa000); /* Degradado dorado */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover del botón */
+#btnEnviar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ffa000, #ff6f00);
+}
+
+
+
+
+/* ==========================
+        RESPONSIVE
+========================== */
+@media screen and (max-width: 768px) {
+    .contenedor-formulario {
+        width: 80%;
+    }
+}
+/* ==========================
+        SECCIÓN CONTACTO
+========================== */
+.contenedor-contacto {
+    width: 50%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Fondo degradado suave */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Sombra moderna */
+    animation: fadeIn 0.8s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenedor-contacto h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Información de contacto */
+.info-contacto {
+    font-size: 1rem;
+    color: #444;
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.info-contacto p {
+    margin-bottom: 8px;
+}
+
+/* ==========================
+        MAPA
+========================== */
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mapa img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================
+        RESPONSIVE
+========================== */
+@media screen and (max-width: 768px) {
+    .contenedor-contacto {
+        width: 80%;
+    }
+
+    .mapa img {
+        max-width: 90%;
+    }
+}
+.contacto ,.home , .presupuesto , .productosl{
+    background-color: #c3dad9;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Redes sociales */
+.footer-redes {
+    text-align: center;
+}
+
+.footer-icono {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en iconos */
+.footer-icono:hover {
+    transform: scale(1.2);
+}
+
+/* Dirección */
+.footer-direccion {
+    text-align: center;
+}
+
+/* Aviso legal */
+.footer-aviso a {
+    color: #ffc107; /* Color dorado */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-aviso a:hover {
+    text-decoration: underline;
+}
